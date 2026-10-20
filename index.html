@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ARDA - Portal sobre o universo de Tolkien. Explore a Terra-média, seus personagens, livros e cronologia.">
+    <meta name="theme-color" content="#111d19">
+    <title>ARDA | Universo de Tolkien</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho" id="inicio">
+        <div class="header-content">
+            <h1 class="nome-site">ARDA</h1>
+            <p class="subtitulo-site">Portal do Universo de Tolkien</p>
+        </div>
+
+        <button
+            type="button"
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-controls="menu-principal"
+            aria-expanded="false"
+            aria-label="Abrir ou fechar menu de navegação"
+        >
+            ☰ Menu
+        </button>
+
+        <nav class="navegacao-principal" id="menu-principal" aria-label="Navegação principal">
+            <a href="#inicio" class="nav-link ativo">Início</a>
+
+            <div class="dropdown">
+                <button
+                    type="button"
+                    class="nav-link dropdown-toggle"
+                    aria-expanded="false"
+                    aria-controls="submenu-explorar"
+                >
+                    Explorar ▾
+                </button>
+
+                <div class="dropdown-menu" id="submenu-explorar">
+                    <a href="#cronologia" class="nav-link">Cronologia</a>
+                    <a href="#livros" class="nav-link">Livros</a>
+                    <a href="#personagens" class="nav-link">Personagens</a>
+                </div>
+            </div>
+
+            <a href="#filmes" class="nav-link">Filmes</a>
+            <a href="#curiosidades" class="nav-link">Curiosidades</a>
+            <a href="#desafio" class="nav-link">Desafio</a>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <section class="banner">
+            <p class="subtitulo">Um universo de histórias e lendas</p>
+            <h2>Bem-vindo à Terra-média</h2>
+            <p>
+                Explore as eras, os povos, os personagens e as histórias
+                criadas por J. R. R. Tolkien.
+            </p>
+            <a href="#cronologia" class="botao">Começar a explorar</a>
+        </section>
+
+        <section id="cronologia" class="secao">
+            <h2>Cronologia da Terra-média</h2>
+            <p class="introducao">
+                Conheça alguns dos principais períodos do legendário de Tolkien.
+            </p>
+
+            <div class="grade">
+                <article class="item">
+                    <h3>Antes das Eras</h3>
+                    <p>A criação de Eä, a música dos Ainur e o início de Arda.</p>
+                </article>
+
+                <article class="item">
+                    <h3>Primeira Era</h3>
+                    <p>Grandes conflitos, reinos élficos e a luta contra Morgoth.</p>
+                </article>
+
+                <article class="item">
+                    <h3>Segunda Era</h3>
+                    <p>A ascensão de Númenor e a forja dos Anéis de Poder.</p>
+                </article>
+
+                <article class="item">
+                    <h3>Terceira Era</h3>
+                    <p>A jornada do Um Anel e a Guerra do Anel.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="livros" class="secao escura">
+            <h2>Biblioteca do Legendário</h2>
+            <p class="introducao">
+                Algumas das obras fundamentais do universo de Tolkien.
+            </p>
+
+            <div class="grade">
+                <article class="card">
+                    <h3>O Hobbit</h3>
+                    <p>A aventura de Bilbo Bolseiro em direção à Montanha Solitária.</p>
+                </article>
+
+                <article class="card">
+                    <h3>O Senhor dos Anéis</h3>
+                    <p>A jornada para destruir o Um Anel e enfrentar Sauron.</p>
+                </article>
+
+                <article class="card">
+                    <h3>O Silmarillion</h3>
+                    <p>Relatos sobre a criação do mundo e as antigas eras.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="personagens" class="secao">
+            <h2>Compêndio de Personagens</h2>
+            <p class="introducao">
+                Conheça figuras importantes da Terra-média.
+            </p>
+
+            <div class="grade-personagens">
+                <article class="card-personagem">
+                    <div class="imagem-personagem">
+                        <img
+                            src="imagens/capa-placeholder.svg"
+                            alt="Imagem ilustrativa de Gandalf"
+                            onerror="this.style.display='none'"
+                        >
+                    </div>
+                    <h4>Gandalf</h4>
+                    <p class="categoria">Maiar</p>
+                    <p class="descricao">Um dos Istari que auxilia os povos livres contra Sauron.</p>
+                </article>
+
+                <article class="card-personagem">
+                    <div class="imagem-personagem">
+                        <img
+                            src="imagens/capa-placeholder.svg"
+                            alt="Imagem ilustrativa de Aragorn"
+                            onerror="this.style.display='none'"
+                        >
+                    </div>
+                    <h4>Aragorn</h4>
+                    <p class="categoria">Homens</p>
+                    <p class="descricao">Herdeiro de Isildur e futuro rei dos Reinos Reunidos.</p>
+                </article>
+
+                <article class="card-personagem">
+                    <div class="imagem-personagem">
+                        <img
+                            src="imagens/capa-placeholder.svg"
+                            alt="Imagem ilustrativa de Legolas"
+                            onerror="this.style.display='none'"
+                        >
+                    </div>
+                    <h4>Legolas</h4>
+                    <p class="categoria">Elfos</p>
+                    <p class="descricao">Arqueiro élfico que participa da Sociedade do Anel.</p>
+                </article>
+
+                <article class="card-personagem">
+                    <div class="imagem-personagem">
+                        <img
+                            src="imagens/capa-placeholder.svg"
+                            alt="Imagem ilustrativa de Gimli"
+                            onerror="this.style.display='none'"
+                        >
+                    </div>
+                    <h4>Gimli</h4>
+                    <p class="categoria">Anões</p>
+                    <p class="descricao">Guerreiro anão e integrante da Sociedade do Anel.</p>
+                </article>
+
+                <article class="card-personagem">
+                    <div class="imagem-personagem">
+                        <img
+                            src="imagens/capa-placeholder.svg"
+                            alt="Imagem ilustrativa de Frodo"
+                            onerror="this.style.display='none'"
+                        >
+                    </div>
+                    <h4>Frodo Bolseiro</h4>
+                    <p class="categoria">Hobbits</p>
+                    <p class="descricao">O hobbit encarregado de levar o Um Anel até Mordor.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="filmes" class="secao escura">
+            <h2>Adaptações Cinematográficas</h2>
+
+            <div class="lista-filmes">
+                <article>
+                    <h3>O Senhor dos Anéis: A Sociedade do Anel</h3>
+                    <p>O início da jornada para destruir o Um Anel.</p>
+                </article>
+
+                <article>
+                    <h3>O Senhor dos Anéis: As Duas Torres</h3>
+                    <p>A guerra se intensifica enquanto a Sociedade segue caminhos diferentes.</p>
+                </article>
+
+                <article>
+                    <h3>O Senhor dos Anéis: O Retorno do Rei</h3>
+                    <p>O confronto final contra Sauron e o destino da Terra-média.</p>
+                </article>
+
+                <article>
+                    <h3>Vídeo - Aragorn</h3>
+                    <video controls width="500" preload="metadata">
+                        <source src="videos/aragorn.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                    <p class="observacao">
+                        Utilize os controles do vídeo para ajustar o volume ou silenciar o áudio.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="curiosidades" class="secao">
+            <h2>Curiosidades</h2>
+
+            <article class="curiosidade">
+                <h3>Línguas construídas</h3>
+                <p>
+                    Tolkien criou idiomas fictícios, como o quenya e o sindarin,
+                    que ajudam a dar profundidade cultural ao seu universo.
+                </p>
+            </article>
+
+            <article class="curiosidade">
+                <h3>Um universo conectado</h3>
+                <p>
+                    Histórias, povos e acontecimentos de diferentes eras
+                    fazem parte de um mesmo legendário.
+                </p>
+            </article>
+        </section>
+
+        <section id="desafio" class="secao escura">
+            <h2>Desafio da Terra-média</h2>
+            <p class="introducao">
+                Descubra sua classificação e escolha um personagem.
+            </p>
+
+            <div class="desafio-conteudo">
+                <button type="button" id="iniciar-desafio" class="botao">
+                    Iniciar desafio
+                </button>
+
+                <p id="resultado-desafio" class="resultado-desafio" aria-live="polite">
+                    Seu resultado aparecerá aqui.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>ARDA — Portal do Universo de Tolkien</p>
+        <p>Projeto acadêmico de desenvolvimento front-end.</p>
+    </footer>
+
+</body>
+</html>
