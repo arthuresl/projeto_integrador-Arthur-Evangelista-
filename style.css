@@ -1,1 +1,454 @@
+/* =========================================
+   ARDA - PORTAL DO UNIVERSO DE TOLKIEN
+   Folha principal de estilos
+   ========================================= */
 
+body {
+    color: #29241d;
+    background-color: #e8dfcf;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ACESSIBILIDADE */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 8px;
+    z-index: 200;
+    padding: 10px 14px;
+    color: #e8dfcf;
+    background-color: #111d19;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+/* CABEÇALHO FIXO DURANTE A ROLAGEM */
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 8%;
+    color: #e8dfcf;
+    background: linear-gradient(135deg, #111d19, #0f1813);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    margin-bottom: 15px;
+}
+
+.nome-site {
+    margin: 0;
+    color: #c79b50;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.subtitulo-site {
+    margin-top: 5px;
+    color: #b8a28e;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+/* NAVEGAÇÃO COM FLEXBOX */
+.navegacao-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #e8dfcf;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: #c79b50;
+    background-color: rgba(199, 155, 80, 0.1);
+    border-bottom-color: #c79b50;
+}
+
+/* LINK DA SEÇÃO ATUAL */
+.nav-link.ativo {
+    color: #c79b50;
+    border-bottom-color: #c79b50;
+    font-weight: bold;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropdown-toggle {
+    white-space: nowrap;
+}
+
+/* O submenu começa imediatamente abaixo do botão, sem lacuna. */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 150;
+    min-width: 190px;
+    padding: 6px;
+    background-color: #111d19;
+    border: 1px solid #c79b50;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown.aberto .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu .nav-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-toggle {
+    display: none;
+    margin: 10px auto;
+    padding: 8px 14px;
+    color: #e8dfcf;
+    background-color: transparent;
+    border: 1px solid #c79b50;
+    border-radius: 4px;
+}
+
+/* BANNER PRINCIPAL */
+.banner {
+    padding: 100px 20px;
+    color: #f5ecdc;
+    background: linear-gradient(135deg, #263b32, #1a2f27);
+    text-align: center;
+}
+
+.banner h2 {
+    margin: 10px 0;
+    font-size: 46px;
+    letter-spacing: 2px;
+}
+
+.banner p {
+    max-width: 650px;
+    margin: 10px auto 25px;
+}
+
+.subtitulo {
+    color: #c79b50;
+}
+
+/* BOTÕES */
+.botao {
+    display: inline-block;
+    padding: 12px 28px;
+    color: #191c17;
+    background-color: #c79b50;
+    border: 2px solid #c79b50;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao:hover {
+    background-color: #d0a75f;
+    transform: translateY(-2px);
+}
+
+/* SEÇÕES */
+.secao {
+    padding: 60px 8%;
+    scroll-margin-top: 150px;
+}
+
+.escura {
+    color: #e8dfcf;
+    background-color: #182822;
+}
+
+.secao h2 {
+    margin: 0 0 25px;
+    color: #9b7031;
+    font-size: 34px;
+    text-align: center;
+}
+
+.escura h2 {
+    color: #d0a75f;
+}
+
+.introducao {
+    max-width: 800px;
+    margin: -10px auto 30px;
+    text-align: center;
+}
+
+/* GRADES */
+.grade,
+.grade-personagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CARTÕES */
+.item,
+.card,
+.curiosidade,
+.lista-filmes article {
+    padding: 20px;
+    color: #29241d;
+    background-color: #f2eadc;
+    border: 1px solid #b9a98f;
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover,
+.card:hover,
+.curiosidade:hover,
+.lista-filmes article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.item h3,
+.card h3,
+.curiosidade h3,
+.lista-filmes h3 {
+    margin-bottom: 10px;
+    color: #765224;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.card p {
+    overflow-wrap: anywhere;
+}
+
+/* COMPÊNDIO DE PERSONAGENS */
+.card-personagem {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    color: #29241d;
+    background-color: #f2eadc;
+    border: 1px solid #b9a98f;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-personagem:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.imagem-personagem {
+    height: 160px;
+    overflow: hidden;
+    background-color: #d9cebf;
+}
+
+.imagem-personagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-personagem h4 {
+    margin: 15px 20px 5px;
+    color: #765224;
+    font-size: 18px;
+}
+
+.card-personagem .categoria {
+    margin: 0 20px 8px;
+    color: #9b7031;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card-personagem .descricao {
+    flex-grow: 1;
+    margin: 0 20px 20px;
+    font-size: 14px;
+}
+
+/* FILMES E VÍDEO */
+.lista-filmes {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.lista-filmes article {
+    margin: 15px 0;
+}
+
+.lista-filmes article p {
+    margin-bottom: 10px;
+}
+
+.lista-filmes video {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 12px;
+    border-radius: 4px;
+}
+
+.observacao {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* CURIOSIDADES */
+.curiosidade {
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+/* DESAFIO JAVASCRIPT */
+.desafio-conteudo {
+    max-width: 700px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+.resultado-desafio {
+    margin-top: 25px;
+    padding: 20px;
+    color: #29241d;
+    background-color: #f2eadc;
+    border: 1px solid #b9a98f;
+    border-radius: 4px;
+    text-align: left;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* RODAPÉ */
+footer {
+    padding: 25px 8%;
+    color: #e8dfcf;
+    background-color: #111d19;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* FOCO VISÍVEL PARA TECLADO */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #c79b50;
+    outline-offset: 3px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 20px 4%;
+    }
+
+    .nome-site {
+        font-size: 30px;
+    }
+
+    .banner {
+        padding: 75px 20px;
+    }
+
+    .banner h2 {
+        font-size: 36px;
+    }
+
+    .secao {
+        padding: 45px 5%;
+    }
+}
+
+@media (max-width: 650px) {
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .navegacao-principal {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    .navegacao-principal.aberto {
+        display: flex;
+    }
+
+    .navegacao-principal > .nav-link {
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+    }
+
+    .secao h2 {
+        font-size: 28px;
+    }
+}
