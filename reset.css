@@ -1,1 +1,63 @@
+/* RESET CSS - ARDA */
 
+/* Padroniza o cálculo de largura e altura dos elementos. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Comportamento geral da página. */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Remove margens padrão dos elementos principais. */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove espaçamento padrão das listas. */
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Evita que mídias ultrapassem seus contêineres. */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Mantém a tipografia dos controles consistente. */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* Indica que botões podem ser acionados. */
+button {
+    cursor: pointer;
+}
+
+/* Esconde elementos marcados como hidden. */
+[hidden] {
+    display: none !important;
+}
